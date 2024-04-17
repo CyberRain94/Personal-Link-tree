@@ -1,0 +1,41 @@
+{
+  "name": "Kelvin Bourdier",
+  "avatar": "/Stock-software-pic.jpg",
+  "links": [
+    {
+      "href": "https://github.com/CyberRain94/redux-stopwatch/pkgs/container/reduxtypescriptstopwatch",
+      "title": "Redux-Typescript-Stopwatch",
+      "image": "https://source.unsplash.com/random/200x200/?photography"
+    },
+    {
+      "href": "https://github.com/CyberRain94/Quote-Generator/pkgs/container/quote-generator",
+      "title": "Quote-Generator",
+      "image": "https://source.unsplash.com/random/200x200/?photography"
+    },
+    {
+      "href": "https://example.com/resume",
+      "title": "Resume",
+      "image": "https://source.unsplash.com/random/200x200/?document"
+    },
+    {
+      "href": "https://example.com/about",
+      "title": "About",
+      "image": "https://source.unsplash.com/random/200x200/?bio"
+    },
+    {
+      "href": "https://www.linkedin.com/in/kelvin-bourdier-85210982",
+      "title": "Contact",
+      "image": "https://source.unsplash.com/random/200x200/?communication"
+    }
+  ],
+  "socials": [
+    {
+      "href": "https://github.com/CyberRain94",
+      "title": "Github"
+    },
+    {
+      "href": "https://linkedin.com/in/some_random_dude",
+      "title": "LinkedIn"
+    }
+  ]
+}
