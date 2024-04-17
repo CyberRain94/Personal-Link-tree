@@ -37,4 +37,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-Additionally you can run this image in Docker it is also found in a ghcr.io package
+***Additionally you can run this image in Docker it is also found in a ghcr.io package please run "docker pull ghcr.io/cyberrain94/personal-link-tree:latest"***
