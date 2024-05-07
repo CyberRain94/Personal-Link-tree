@@ -1,0 +1,17 @@
+node_modules/
+
+# Production build directory
+.next/
+
+# Log files
+*.log
+
+# Environment variables file
+.env
+
+# Cache directories
+.cache/
+.vscode/
+
+# IDE files
+.idea/
