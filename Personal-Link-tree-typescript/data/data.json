@@ -17,11 +17,7 @@
       "title": "Resume",
       "image": "https://source.unsplash.com/random/200x200/?document"
     },
-    {
-      "href": "https://example.com/about",
-      "title": "About",
-      "image": "https://source.unsplash.com/random/200x200/?bio"
-    },
+  
     {
       "href": "https://www.linkedin.com/in/kelvin-bourdier-85210982",
       "title": "Contact",

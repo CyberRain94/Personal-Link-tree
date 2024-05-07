@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import {GitHubIcon,TwitterIcon,LinkCard} from "./icons"
 import data from "../data/data.json"
-
+import AboutMe from './AboutMe'
 
 
 
@@ -10,7 +10,7 @@ export default async function HomePage() {
 
 
   return (
-    <div className="flex items-center flex-col mx-auto w-full justify-center mt-16 px-8 pb-10">
+    <div className="space-y-6 flex items-center flex-col mx-auto w-full justify-center mt-16 px-8 pb-10">
       <Image
         priority
         className="rounded-full"
@@ -20,6 +20,7 @@ export default async function HomePage() {
         height={96}
       />
       <h1 className="font-bold mt-4 mb-8 text-xl text-white">{data.name}</h1>
+      <AboutMe/>
       {data.links.map((link) => (
         <LinkCard key={link.href} {...link} />
       ))}
