@@ -7,7 +7,6 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  distDir: 'out',
 
   trailingSlash:true,
   
