@@ -15,7 +15,7 @@ const inter = Inter({
 export default function HomePage() {
   const handleSubmit = async (name: string, email: string, message: string) => {
     try {
-      const response = await fetch('/api/sendEmail', {
+      const response = await fetch('netlify/functions/api/sendEmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export default function HomePage() {
         <LinkCard key={link.href} {...link} />
       ))}
       <ContactForm onSubmit={handleSubmit} />
-      <div className="flex items-center gap-4 mt-8 text-white">
+      <div className="flex items-center gap-4 mt-8 text-black">
         {data.socials.map((social) => (
           <a
             aria-label={`${social.title} link`}

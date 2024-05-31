@@ -17,8 +17,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-lg">
-      <div className="mb-4">
+    <form onSubmit={handleSubmit} className="w-full max-w-lg bg-gray-800 bg-opacity-60 p-8 w-72 mt-8 rounded-lg">
+      <div className="mb-4 ">
         <label htmlFor="name" className="block text-white mb-1">Name:</label>
         <input
           id="name"
@@ -50,7 +50,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           required
         />
       </div>
-      <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
+      <button type="submit" className="bg-yellow-600 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
     </form>
   );
 };

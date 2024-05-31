@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutMe: React.FC = () => {
   return (
-    <div className=" bg-gray-800 text-white p-6 rounded-lg mx-auto max-w-8xl">
+    <div className=" bg-gray-800 text-white p-6 bg-opacity-50 rounded-lg mx-auto max-w-8xl">
       <h3 className="text-2xl font-bold mb-4 text-center">
         Hey there! I’m Kelvin Bourdier, a software developer with a lifelong fascination for technology.
       </h3>
