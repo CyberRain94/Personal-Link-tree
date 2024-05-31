@@ -7,8 +7,9 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
- 
- trailingSlash:true,
+  distDir: 'build',
+
+  trailingSlash:true,
   
   output:'export',
 };
