@@ -2,8 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "deploy": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -26,8 +25,5 @@
     "css-loader": "^7.1.1",
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0"
-  },
-  "resolutions": {
-    "next": "^13.0.0"
   }
 }
