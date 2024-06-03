@@ -4,9 +4,6 @@ const nextConfig = {
     domains: ['source.unsplash.com'],
     unoptimized: true,
   },
-  experimental: {
-    appDir: true,
-  },
 
   trailingSlash:true,
   
