@@ -77,7 +77,7 @@ const handler: Handler = async (event, context) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER, // Set the recipient's email address here
       subject: `Message from ${name}`,
       text: `From: ${name} <${email}>\n\n${message}`,
     };

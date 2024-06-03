@@ -58,8 +58,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 export default ContactForm;*/
 
 
-'use client';
-
 import React, { useState } from 'react';
 
 const ContactForm: React.FC = () => {
@@ -71,24 +69,30 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const res = await fetch('/.netlify/functions/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, message }),
-    });
+    try {
+      const res = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
 
-    const data = await res.json();
-    if (res.status === 200) {
-      setResponseMessage('Email sent successfully!');
-    } else {
-      setResponseMessage(data.error || 'Failed to send email');
+      const data = await res.json();
+
+      if (res.status === 200) {
+        setResponseMessage('Email sent successfully!');
+      } else {
+        setResponseMessage(data.error || 'Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setResponseMessage('Failed to send email');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-lg bg-gray-800 bg-opacity-60 p-8 w-72 mt-8 rounded-lg">
+    <form onSubmit={handleSubmit} className="w-full max-w-lg bg-gray-800 bg-opacity-60 p-8 mt-8 rounded-lg">
       <div className="mb-4">
         <label htmlFor="name" className="block text-white mb-1">Name:</label>
         <input
