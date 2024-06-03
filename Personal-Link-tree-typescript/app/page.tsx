@@ -15,7 +15,7 @@ const inter = Inter({
 export default function HomePage() {
   const handleSubmit = async (name: string, email: string, message: string) => {
     try {
-      const response = await fetch('/.netlify/functions/send-email', { // Corrected endpoint name
+      const response = await fetch('/.netlify/functions/send-Email', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

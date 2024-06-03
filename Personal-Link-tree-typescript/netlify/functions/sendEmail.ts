@@ -36,7 +36,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }*/
 
 // netlify/functions/send-email.ts
-
 import { Handler } from '@netlify/functions';
 import nodemailer from 'nodemailer';
 
@@ -77,7 +76,7 @@ const handler: Handler = async (event, context) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER, // Change this to the recipient's email address
       subject: `Message from ${name}`,
       text: `From: ${name} <${email}>\n\n${message}`,
     };
