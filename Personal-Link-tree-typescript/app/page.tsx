@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { GitHubIcon, TwitterIcon, LinkCard } from './icons';
 import data from '../data/data.json';
 import AboutMe from './aboutMe';
-import ContactForm from './emailTemplate'; // Assuming ContactForm is exported correctly
+import ContactForm from './emailTemplate'; 
 import { Inter } from 'next/font/google';
 
 const inter = Inter({
