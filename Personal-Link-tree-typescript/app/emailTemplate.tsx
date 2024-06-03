@@ -58,41 +58,31 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 export default ContactForm;*/
 
 
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 
-const ContactForm: React.FC = () => {
+interface ContactFormProps {
+  onSubmit: (name: string, email: string, message: string) => Promise<void>;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
   const [responseMessage, setResponseMessage] = useState<string>('');
 
-  const handleSubmit = async (event: React.FormEvent) => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
     try {
-      const res = await fetch('/.netlify/functions/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, message }),
-      });
-
-      const data = await res.json();
-
-      if (res.status === 200) {
-        setResponseMessage('Email sent successfully!');
-      } else {
-        setResponseMessage(data.error || 'Failed to send email');
-      }
+      await onSubmit(name, email, message);
+      setResponseMessage('Email sent successfully!');
     } catch (error) {
-      console.error('Error sending email:', error);
-      setResponseMessage('Failed to send email');
+      setResponseMessage((error as Error).message || 'Failed to send email');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-lg bg-gray-800 bg-opacity-60 p-8 mt-8 rounded-lg">
+    <form onSubmit={handleSubmit} className="w-full max-w-lg bg-gray-800 bg-opacity-60 p-8 w-72 mt-8 rounded-lg">
       <div className="mb-4">
         <label htmlFor="name" className="block text-white mb-1">Name:</label>
         <input

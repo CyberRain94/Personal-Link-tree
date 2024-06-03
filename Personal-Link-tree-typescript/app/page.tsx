@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { GitHubIcon, TwitterIcon, LinkCard } from './icons';
 import data from '../data/data.json';
 import AboutMe from './aboutMe';
-import ContactForm from './emailTemplate';
+import ContactForm from './emailTemplate'; // Assuming ContactForm is exported correctly
 import { Inter } from 'next/font/google';
 
 const inter = Inter({
@@ -15,7 +15,7 @@ const inter = Inter({
 export default function HomePage() {
   const handleSubmit = async (name: string, email: string, message: string) => {
     try {
-      const response = await fetch('/.netlify/functions/sendEmail', {
+      const response = await fetch('/.netlify/functions/send-email', { // Corrected endpoint name
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
