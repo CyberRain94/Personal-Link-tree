@@ -10,7 +10,7 @@ const nextConfig = {
 
   trailingSlash:true,
   
-  output:'export',
+  distDir:'build',
 };
 
 module.exports = nextConfig;
