@@ -1,4 +1,8 @@
-/* import { NextApiRequest, NextApiResponse } from 'next';
+/* 
+
+***For stock build/deployment without netlify uncomment this code and delete code below***
+
+import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

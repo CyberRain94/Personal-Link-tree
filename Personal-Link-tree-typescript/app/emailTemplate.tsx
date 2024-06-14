@@ -1,5 +1,10 @@
  'use client';
 /*
+***For addressing stock build without netlify***
+***Remove netlify functions api/ route for next/pages/api route, copy sendEmail.ts there***
+***uncomment this code and delete active code below***
+***Update send email path from page.tsx line 18 to desired path***
+***Delete netlify.toml***
 import React, { useState } from 'react';
 
 interface ContactFormProps {
