@@ -4,24 +4,20 @@
   "links": [
     {
       "href": "https://github.com/CyberRain94/redux-stopwatch/pkgs/container/reduxtypescriptstopwatch",
-      "title": "Redux-Typescript-Stopwatch",
-      "image": "https://source.unsplash.com/random/200x200/?photography"
+      "title": "Redux-Typescript-Stopwatch"
     },
     {
       "href": "https://github.com/CyberRain94/Quote-Generator/pkgs/container/quote-generator",
-      "title": "Quote-Generator",
-      "image": "https://source.unsplash.com/random/200x200/?photography"
+      "title": "Quote-Generator"
     },
     {
       "href": "/Kelvin-resume-final.pdf",
-      "title": "Resume",
-      "image": "https://source.unsplash.com/random/200x200/?document"
+      "title": "Resume"
     },
   
     {
       "href": "https://www.linkedin.com/in/kelvin-bourdier-85210982",
-      "title": "LinkedIn",
-      "image": "https://source.unsplash.com/random/200x200/?communication"
+      "title": "LinkedIn"
     }
   ],
   "socials": [
