@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export function TwitterIcon() {
   return (
@@ -50,11 +49,9 @@ export function GitHubIcon() {
 export function LinkCard({
   href,
   title,
-  image,
 }: {
   href: string;
   title: string;
-  image?: string;
 }) {
   return (
     <a
@@ -65,15 +62,6 @@ export function LinkCard({
     >
       <div className="flex text-center w-full">
         <div className="w-10 h-10">
-          {image && (
-            <Image
-              className="rounded-sm"
-              alt={title}
-              src={image}
-              width={40}
-              height={40}
-            />
-          )}
         </div>
         <h2 className="flex justify-center items-center font-semibold w-full text-gray-700 -ml-10">
           {title}
