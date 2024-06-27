@@ -62,6 +62,7 @@ export function LinkCard({
     >
       <div className="flex text-center w-full">
         <div className="w-10 h-10">
+          
         </div>
         <h2 className="flex justify-center items-center font-semibold w-full text-gray-700 -ml-10">
           {title}
