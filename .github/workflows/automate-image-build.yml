@@ -20,5 +20,5 @@ jobs:
 
     - name: Build and push the Docker image
       run: |
-        docker build -f Personal-Link-tree/Personal-Link-tree-typescript/Dockerfile -t ghcr.io/cyberrain94/personal-link-tree:latest Personal-Link-tree/Personal-Link-tree-typescript
+        docker build -f Personal-Link-tree-typescript/Dockerfile -t ghcr.io/cyberrain94/personal-link-tree:latest Personal-Link-tree-typescript
         docker push ghcr.io/cyberrain94/personal-link-tree:latest
