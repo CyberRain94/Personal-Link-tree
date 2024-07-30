@@ -11,11 +11,16 @@ jobs:
   build_and_publish:
 
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v4
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Log in to GitHub Container Registry
+      run: echo "${{ secrets.GH_PAT }}" | docker login ghcr.io -u cyberrain94 --password-stdin
+
     - name: Build and push the Docker image
       run: |
-          docker login --username cyberrain94 --password ${{ secrets.GH_PAT }} ghcr.io
-          docker build -f Dockerfile --tag ghcr.io/cyberrain94/personal-link-tree:latest
-          docker push ghcr.io/cyberrain94/personal-link-tree:latest
+        docker build -f Dockerfile -t ghcr.io/cyberrain94/personal-link-tree:latest .
+        docker push ghcr.io/cyberrain94/personal-link-tree:latest
